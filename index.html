@@ -17,8 +17,37 @@
 
 <body>
 
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
 
-    
+    <button type="button" class="btn btn-link">Link</button>
+
+    <div class="button-list"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9" id="gif-display"></div>
+            <div class="col-sm-3" id="button-add">
+                <form>
+                    <div class="form-group">
+                        <label for="input-movie">Add a Movie!</label>
+                        <input type="text" class="form-control" id="movie-text" placeholder="e.g. Star Wars">
+                    </div>
+                    <button type="submit" class="btn btn-info" id="movie-search">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-- bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -31,7 +60,9 @@
         crossorigin="anonymous"></script>
     <!-- end bootstrap scripts -->
 
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+
 </body>
 
 </html>
