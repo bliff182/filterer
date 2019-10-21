@@ -1,3 +1,7 @@
+body {
+    background-image: url("../images/light-grey-terrazzo/light-grey-terrazzo.png");
+}
+
 .button-list {
     margin-bottom: 20px;
 }
@@ -19,3 +23,10 @@
     margin: 10px;
 }
 
+.bg-info {
+    color: white;
+}
+
+.gif {
+    border: 2px solid black;
+}
