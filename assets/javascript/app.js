@@ -15,16 +15,19 @@ $(document).ready(function () {
 
     // create buttons dynamically
     function createButtons() {
+
         $(".button-list").empty(); // prevent repeat buttons on each submission
-        for (var i = 0; i < topics.length; i++) {
+
+        for (var i = 0; i < topics.length; i++) { // creating a button for each item in topics array
 
             var topicButton = $("<button>");
-            topicButton.addClass("btn btn-info topic-btn");
+            topicButton.addClass("btn btn-dark topic-btn");
             topicButton.attr("topic-data", topics[i]);
             topicButton.text(topics[i]);
+            $(".button-list").append(topicButton); 
 
-            $(".button-list").append(topicButton);
         }
+
     }
 
     // display gifs of clicked buttons
@@ -42,7 +45,6 @@ $(document).ready(function () {
             var results = response.data;
 
             for (var i = 0; i < results.length; i++) {
-
                 var gifDiv = $("<div>");
                 gifDiv.addClass("gif-data");
 
@@ -57,19 +59,18 @@ $(document).ready(function () {
 
                 gifDiv.append(gifImage);
                 gifDiv.append(gifRating);
-
                 $("#gif-display").prepend(gifDiv);
-            }
 
+            }
+            
         });
+
     }
 
     // toggle gifs between still and animated
     function toggleAnimation() {
 
         var state = $(this).attr("data-state");
-
-        // console.log(state);
 
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
@@ -79,6 +80,7 @@ $(document).ready(function () {
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
         }
+
     }
 
 
@@ -91,10 +93,14 @@ $(document).ready(function () {
 
     // add buttons from search bar
     $("#topic-search").on("click", function () {
-        event.preventDefault();
+
+        event.preventDefault(); // prevent page reload on button click
+
         var searchTerm = $("#topic-text").val().trim(); // store search term in variable
-        topics.push(searchTerm);
+        topics.push(searchTerm); // searchTerm added to topics array
+
         createButtons();
+
     })
 
     // click button to display gifs
@@ -103,6 +109,6 @@ $(document).ready(function () {
     // click gif to toggle animation on or off
     $(document).on("click", ".gif", toggleAnimation);
 
-    // must use $(document) for onclick events on elements that don't exist on page load (.gif) 
-    // same for elements that are taken away and reappended (.topic-btn)
+    // must use $(document).on() for click events on elements that don't exist on page load (ex. .gif class) 
+    // same for elements that are taken away and reappended (ex. .topic-btn class)
 });
