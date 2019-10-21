@@ -16,12 +16,15 @@
 </head>
 
 <body>
-
-    <div class="button-list"></div>
-
-    <div class="container" id="content-wrapper">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9" id="gif-display"></div> <!-- div that will display all gifs -->
+            <div class="col-md-12">
+                <div class="button-list"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="content-wrapper">
+        <div class="row">
             <div class="col-md-3" id="button-add">
                 <form>
                     <div class="form-group">
@@ -31,6 +34,7 @@
                     <button type="submit" class="btn btn-info" id="topic-search">Submit</button>
                 </form>
             </div>
+            <div class="col-md-9" id="gif-display"></div> <!-- div that will display all gifs -->
         </div>
     </div>
 
@@ -49,7 +53,6 @@
         crossorigin="anonymous"></script>
     <!-- end bootstrap scripts -->
 
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>

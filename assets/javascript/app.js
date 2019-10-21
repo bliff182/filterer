@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // VARIABLES
-    // ============================================================================================================
+    // =====================================================================================================================
 
 
     // initial movies to be displayed as buttons
@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 
     // FUNCTIONS
-    // ============================================================================================================
+    // =====================================================================================================================
 
 
     // create buttons dynamically
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
 
     // FUNCTION EXECUTION
-    // ============================================================================================================
+    // =====================================================================================================================
 
 
     // create initial set of buttons
@@ -103,4 +103,6 @@ $(document).ready(function () {
     // click gif to toggle animation on or off
     $(document).on("click", ".gif", toggleAnimation);
 
+    // must use $(document) for onclick events on elements that don't exist on page load (.gif) 
+    // same for elements that are taken away and reappended (.topic-btn)
 });
