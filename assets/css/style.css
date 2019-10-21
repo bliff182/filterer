@@ -5,3 +5,17 @@
 .topic-btn {
     margin: 3px;
 }
+
+#content-wrapper {
+    margin: 0;
+}
+
+#button-add {
+    float: right;
+}
+
+.gif-data {
+    float: left;
+    margin: 10px;
+}
+
