@@ -2,21 +2,22 @@ body {
     background-image: url("../images/light-grey-terrazzo/light-grey-terrazzo.png");
 }
 
+p {
+    margin-bottom: 0;
+}
+
 .button-list {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .topic-btn {
     margin: 5px;
 }
 
-/* #content-wrapper {
-    margin: 0;
-} */
-
-/* #button-add {
-    float: right;
-} */
+#clear-btn {
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
 
 .gif-data {
     float: left;
