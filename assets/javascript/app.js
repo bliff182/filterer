@@ -6,7 +6,8 @@ $(document).ready(function () {
 
     // initial movies to be displayed as buttons
     var topics = ["The Shawshank Redemption", "The Godfather", "The Godfather: Part II", "The Dark Knight", "12 Angry Men",
-        "Schindler's List", "The Lord of the Rings: The Return of the King", "Pulp Fiction"];
+        "Schindler's List", "The Lord of the Rings: The Return of the King", "Pulp Fiction", "The Good, the Bad, and the Ugly",
+        "Fight Club"];
 
 
     // FUNCTIONS
@@ -24,7 +25,7 @@ $(document).ready(function () {
             topicButton.addClass("btn btn-dark topic-btn");
             topicButton.attr("topic-data", topics[i]);
             topicButton.text(topics[i]);
-            $(".button-list").append(topicButton); 
+            $(".button-list").append(topicButton);
 
         }
 
@@ -62,7 +63,7 @@ $(document).ready(function () {
                 $("#gif-display").prepend(gifDiv);
 
             }
-            
+
         });
 
     }

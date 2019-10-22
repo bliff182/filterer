@@ -12,17 +12,24 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>GifTastic!</title>
+    <title>GifTastic Movies!</title>
 </head>
 
 <div class="jumbotron jumbotron-fluid bg-dark">
     <div class="container">
         <h1 class="display-4">GifTastic Movies!</h1>
         <p class="lead">Click a button to view some selected gifs related to that movie!</p>
-        <p class="lead">We've got you started with some of the top movies listed on IMDb, but you can add buttons of
+        <p class="lead">We've got you started with some of the top movies as rated on IMDb, but you can add buttons of
             your own! Just type a movie into the search bar and click submit to create your very own gif-generating
             button!</p>
         <p class="lead">Once you've generated some gifs, just click on them to get them giffing!</p>
+        <form>
+            <div class="form-group">
+                <label for="input-topic">Add a Movie!</label>
+                <input type="text" class="form-control" id="topic-text" placeholder="e.g. Star Wars">
+            </div>
+            <button type="submit" class="btn btn-secondary" id="topic-search">Submit</button>
+        </form>
     </div>
 </div>
 
@@ -36,16 +43,7 @@
     </div>
     <div class="container-fluid" id="content-wrapper">
         <div class="row">
-            <div class="col-md-3" id="button-add">
-                <form>
-                    <div class="form-group">
-                        <label for="input-topic">Add a Movie!</label>
-                        <input type="text" class="form-control" id="topic-text" placeholder="e.g. Star Wars">
-                    </div>
-                    <button type="submit" class="btn btn-dark" id="topic-search">Submit</button>
-                </form>
-            </div>
-            <div class="col-md-9" id="gif-display"></div> <!-- div that will display all gifs -->
+            <div class="col-md-12" id="gif-display"></div> <!-- div that will display all gifs -->
         </div>
     </div>
 
